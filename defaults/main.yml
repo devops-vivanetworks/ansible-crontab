@@ -1,0 +1,4 @@
+---
+# defaults file for crontab
+
+crontab_hour: 19 # 19 UTC / 7 PM UTC

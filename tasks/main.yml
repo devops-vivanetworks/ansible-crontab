@@ -1,0 +1,24 @@
+---
+# tasks file for crontab
+
+- block:
+    - name: cron service
+      service:
+        name: cron
+        enabled: true
+       state: started
+
+    - name: install crontab
+      template:
+        src: crontab.j2
+        dest: /etc/crontab
+        backup: true
+        owner: root
+        group: root
+        mode:  0644
+      notify:
+      - reload cron
+  become: yes
+  become_method: sudo
+  tags:
+    - crontab

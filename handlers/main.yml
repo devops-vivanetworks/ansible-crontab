@@ -1,0 +1,12 @@
+---
+# handlers file for crontab
+
+- name: reload cron
+  become: yes
+  become_method: sudo
+  service:
+    name: cron
+    enabled: true
+    state: reloaded
+  tags:
+    - crontab

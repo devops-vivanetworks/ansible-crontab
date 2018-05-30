@@ -1,0 +1,11 @@
+galaxy_info:
+  description: Set up crontab
+  company: Traveloka
+  min_ansible_version: 2.0
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+  galaxy_tags: []
+dependencies: []
