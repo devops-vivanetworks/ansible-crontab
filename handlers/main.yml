@@ -7,6 +7,6 @@
   service:
     name: cron
     enabled: true
-    state: reloaded
+    state: restarted
   tags:
     - crontab
