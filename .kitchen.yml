@@ -15,8 +15,10 @@ provisioner:
   name: ansible_playbook
   hosts: all
   ansible_verbose: true
+  require_chef_omnibus: false  
   require_chef_for_busser: false
-  playbook: test/test.yml
+  playbook: tests/test.yml
+  requirements_path: tests/requirements.yml
 
 verifier:
   name: inspec
